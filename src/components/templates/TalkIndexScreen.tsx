@@ -3,7 +3,7 @@ import styled from "styled-components";
 import CommonHeader from "../organisms/CommonHeader";
 import CommonFooter from "../organisms/CommonFooter";
 import TalkRoomList from "../organisms/TalkRoomList";
-import talkRoomList from "../../constants/talkRoomList"
+import talkRoomList from "../../constants/talkRoomList";
 
 type Props = {};
 
@@ -17,7 +17,7 @@ export default (props: Props) => {
         <TalkRoomList talkRoomList={talkRoomList} />
       </Main>
       <Footer>
-        <CommonFooter />
+        <CommonFooter activeIndex={1} />
       </Footer>
     </Root>
   );

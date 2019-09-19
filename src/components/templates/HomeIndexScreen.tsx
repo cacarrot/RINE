@@ -16,7 +16,7 @@ export default (props: Props) => {
         <HomeMain />
       </Main>
       <Footer>
-        <CommonFooter />
+        <CommonFooter activeIndex={0} />
       </Footer>
     </Root>
   );

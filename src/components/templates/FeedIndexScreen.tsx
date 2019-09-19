@@ -36,7 +36,7 @@ export default (props: Props) => {
         </FixedControl> */}
       </Main>
       <Footer>
-        <CommonFooter />
+        <CommonFooter activeIndex={2} />
       </Footer>
     </Root>
   );

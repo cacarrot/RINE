@@ -1,0 +1,15 @@
+{
+  "sortToTop": [
+    "name",
+    "description",
+    "version",
+    "author",
+    "private",
+    "main",
+    "config",
+    "scripts",
+    "dependencies",
+    "devDependencies",
+    "browser"
+  ]
+}

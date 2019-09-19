@@ -1,0 +1,90 @@
+{
+  "name": "rine",
+  "version": "1.0.0",
+  "private": true,
+  "config": {
+    "port": {
+      "react": "3000",
+      "lambda": "9000",
+      "storybook": "9001"
+    }
+  },
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "audit": "node ./audit/index.js",
+    "build": "cross-env NODE_ENV=production run-s build:{react,lambda}",
+    "build:lambda": "netlify-lambda build src/functions",
+    "build:react": "react-scripts build",
+    "build:storybook": "build-storybook -s public",
+    "fixpack": "fixpack",
+    "start": "cross-env NODE_ENV=development run-p start:{react,lambda,storybook}",
+    "start:lambda": "netlify-lambda serve src/functions -p $npm_package_config_port_lambda",
+    "start:react": "HTTPS=true PORT=$npm_package_config_port_react react-scripts start",
+    "start:storybook": "start-storybook -s public -p $npm_package_config_port_storybook",
+    "test": "react-scripts test"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "connected-react-router": "^6.5.2",
+    "dexie": "^2.0.4",
+    "dom-to-image": "^2.6.0",
+    "file-saver": "^2.0.2",
+    "moment": "^2.24.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-icons": "^3.7.0",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.1.0",
+    "react-swipeable-views": "^0.13.3",
+    "redux-persist": "^5.10.0",
+    "redux-starter-kit": "^0.6.3",
+    "rss-parser": "^3.7.2",
+    "styled-components": "^4.3.2",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.1.10",
+    "@storybook/addon-links": "^5.1.10",
+    "@storybook/addons": "^5.1.10",
+    "@storybook/react": "^5.1.10",
+    "@types/aws-lambda": "^8.10.31",
+    "@types/dom-to-image": "^2.6.0",
+    "@types/file-saver": "^2.0.1",
+    "@types/history": "^4.7.2",
+    "@types/jest": "24.0.17",
+    "@types/node": "12.7.1",
+    "@types/qs": "^6.5.3",
+    "@types/react": "16.9.1",
+    "@types/react-dom": "16.8.5",
+    "@types/react-redux": "^7.1.0",
+    "@types/react-router-dom": "^4.3.4",
+    "@types/react-swipeable-views": "^0.13.0",
+    "@types/styled-components": "^4.1.18",
+    "@types/uuid": "^3.4.5",
+    "cross-env": "^5.2.1",
+    "fixpack": "^2.3.1",
+    "lighthouse": "^5.2.0",
+    "netlify-lambda": "^1.6.3",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "source-map-explorer": "^2.0.1",
+    "typescript": "3.5.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}

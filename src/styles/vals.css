@@ -1,0 +1,12 @@
+.vals_down {
+  animation: kf_vals_down 5s ease-in 1;
+}
+
+@keyframes kf_vals_down {
+  99% {
+    transform: translateY(100vh);
+  }
+  100% {
+    opacity: 0;
+  }
+}

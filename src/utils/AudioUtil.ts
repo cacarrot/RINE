@@ -1,5 +1,8 @@
+import { isIOS } from "react-device-detect";
+
 export default class AudioUtil {
   static play = (src: string, isLoop: boolean = false) => {
+    if (isIOS) return;
     const audio = new Audio(src);
     audio.loop = isLoop;
     audio.play();
@@ -10,6 +13,10 @@ export default class AudioUtil {
   };
 
   static playMessageReceived = (isLoop: boolean = false) => {
+    AudioUtil.play(require("../audio/piko.mp3"), isLoop);
+  };
+
+  static playFirst = (isLoop: boolean = false) => {
     AudioUtil.play(require("../audio/piko.mp3"), isLoop);
   };
 }

@@ -8,7 +8,7 @@ export default {
   FOOTER: {
     HEIGHT: "50px",
     INNER_HEIGHT: "30px",
-    FONT_SIZE: "20px",
+    FONT_SIZE: "16px",
     ICON_SIZE: "20px",
   },
 };

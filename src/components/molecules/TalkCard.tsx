@@ -196,6 +196,8 @@ const ColumnWrapper = styled.div`
 `;
 
 const UserIcon = styled(Img)`
+  flex-grow: 0;
+  flex-shrink: 0;
   float: left;
   width: 40px;
   height: 40px;

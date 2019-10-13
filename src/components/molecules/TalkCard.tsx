@@ -161,6 +161,7 @@ const Time = styled.time`
 const Photo = styled(Img)`
   width: 50vw;
   height: auto;
+  max-height: 50vh;
   position: relative;
   padding: 10px;
   border-radius: 12px;
@@ -196,6 +197,8 @@ const ColumnWrapper = styled.div`
 `;
 
 const UserIcon = styled(Img)`
+  flex-grow: 0;
+  flex-shrink: 0;
   float: left;
   width: 40px;
   height: 40px;

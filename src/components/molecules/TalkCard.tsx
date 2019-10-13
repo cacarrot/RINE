@@ -161,6 +161,7 @@ const Time = styled.time`
 const Photo = styled(Img)`
   width: 50vw;
   height: auto;
+  max-height: 50vh;
   position: relative;
   padding: 10px;
   border-radius: 12px;

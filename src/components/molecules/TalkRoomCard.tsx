@@ -67,7 +67,7 @@ const Card = styled.div`
 const UserIcon = styled.img`
   /* Size */
   width: 40px;
-  height: auto;
+  height: 40px;
   /* Other */
   border-radius: 50%;
 `;

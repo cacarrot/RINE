@@ -27,8 +27,8 @@ const INITIAL_STATE: State = {
   0: {
     talkList: [
       {
-        name: "J.A.R.V.I.S",
-        value: "Hello. I'm Jarvis.",
+        name: talkRoomList[0].name,
+        value: talkRoomList[0].firstMessage,
         logo: talkRoomList[0].logo,
       },
     ],
@@ -37,9 +37,19 @@ const INITIAL_STATE: State = {
   1: {
     talkList: [
       {
-        name: "Gideon",
-        value: "Hello. I'm Gideon.",
+        name: talkRoomList[1].name,
+        value: talkRoomList[1].firstMessage,
         logo: talkRoomList[1].logo,
+      },
+    ],
+    draftText: "",
+  },
+  2: {
+    talkList: [
+      {
+        name: talkRoomList[2].name,
+        value: talkRoomList[2].firstMessage,
+        logo: talkRoomList[2].logo,
       },
     ],
     draftText: "",

@@ -59,9 +59,9 @@ const Card = styled.div`
   padding: 10px;
   /* Color */
   background-color: #ffffff;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #fff0f0;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #fff0f0;
 `;
 
 const UserIcon = styled.img`

@@ -5,4 +5,5 @@ export type TalkRoomItem = {
   logo?: string;
   name?: string;
   botType?: BotType;
+  firstMessage?: string;
 };
